@@ -185,6 +185,10 @@
     <Compile Include="Migrations\202210111612570_AddedRoleToAspNetUsersTable.Designer.cs">
       <DependentUpon>202210111612570_AddedRoleToAspNetUsersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210111620282_SeededAspNetRolesTable.cs" />
+    <Compile Include="Migrations\202210111620282_SeededAspNetRolesTable.Designer.cs">
+      <DependentUpon>202210111620282_SeededAspNetRolesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210111612570_AddedRoleToAspNetUsersTable.resx">
       <DependentUpon>202210111612570_AddedRoleToAspNetUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210111620282_SeededAspNetRolesTable.resx">
+      <DependentUpon>202210111620282_SeededAspNetRolesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
