@@ -112,6 +112,10 @@ namespace InsightCorp.Models
         public string State { get; set; }
 
         [Required]
+        [Display(Name = "Company Role")]
+        public string Role { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

@@ -29,6 +29,7 @@ namespace InsightCorp.Models
         public string DepartmentName { get; set; }
         public string City { get; set; }
         public string State { get; set; }
+        public string Role { get; set; }
 
     }
 
