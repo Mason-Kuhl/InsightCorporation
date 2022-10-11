@@ -81,6 +81,10 @@ namespace InsightCorp.Models
         public string PreferredName { get; set; }
 
         [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
         [Display(Name = "Date Hired")]
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateHired { get; set; }

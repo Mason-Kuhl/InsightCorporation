@@ -159,6 +159,7 @@ namespace InsightCorp.Controllers
                     MiddleInitial = model.MiddleInitial,
                     LastName = model.LastName,
                     PreferredName = model.PreferredName,
+                    PhoneNumber = model.PhoneNumber,
                     DateHired = model.DateHired,
                     DepartmentName = model.DepartmentName,
                     JobTitle = model.JobTitle,
