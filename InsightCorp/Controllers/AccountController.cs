@@ -166,13 +166,28 @@ namespace InsightCorp.Controllers
                     ManagerId = model.ManagerId,
                     ManagerName = model.ManagerName,
                     City = model.City,
-                    State = model.State
+                    State = model.State,
+                    Role = model.Role
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    if (user.Role == "Employee")
+                    {
+                        await UserManager.AddToRoleAsync(user.Id, "Employee");
+                    }
+                    if (user.Role == "Manager")
+                    {
+                        await UserManager.AddToRoleAsync(user.Id, "Manager");
+                    }
+                    if (user.Role == "Executive")
+                    {
+                        await UserManager.AddToRoleAsync(user.Id, "Executive");
+                    }
+                  
+
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
