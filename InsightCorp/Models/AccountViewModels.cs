@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace InsightCorp.Models
@@ -64,6 +65,48 @@ namespace InsightCorp.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Middle Initial")]
+        public string MiddleInitial { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Preferred First Name")]
+        public string PreferredName { get; set; }
+
+        [Required]
+        [Display(Name = "Date Hired")]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime DateHired { get; set; }
+
+        [Required]
+        [Display(Name = "Department Name")]
+        public string DepartmentName { get; set; }
+
+        [Required]
+        [Display(Name = "Job Title")]
+        public string JobTitle { get; set; }
+
+        [Required]
+        [Display(Name = "Manager ID")]
+        public string ManagerId { get; set; }
+
+        [Required]
+        [Display(Name = "Manager Name")]
+        public string ManagerName { get; set; }
+
+        [Required]
+        public string City { get; set; }
+
+        [Required]
+        public string State { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
