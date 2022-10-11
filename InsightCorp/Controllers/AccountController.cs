@@ -151,7 +151,22 @@ namespace InsightCorp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    MiddleInitial = model.MiddleInitial,
+                    LastName = model.LastName,
+                    PreferredName = model.PreferredName,
+                    DateHired = model.DateHired,
+                    DepartmentName = model.DepartmentName,
+                    JobTitle = model.JobTitle,
+                    ManagerId = model.ManagerId,
+                    ManagerName = model.ManagerName,
+                    City = model.City,
+                    State = model.State
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
