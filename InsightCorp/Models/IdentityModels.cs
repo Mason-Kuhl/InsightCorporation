@@ -24,8 +24,7 @@ namespace InsightCorp.Models
         public string PreferredName { get; set; }
         public DateTime DateHired { get; set; }
         public string JobTitle { get; set; }
-        public string ManagerName { get; set; }
-        public string ManagerId { get; set; }
+        public int ManagerId { get; set; }
         public string DepartmentName { get; set; }
         public string City { get; set; }
         public string State { get; set; }
@@ -35,6 +34,7 @@ namespace InsightCorp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Manager> Managers { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

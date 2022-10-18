@@ -164,7 +164,6 @@ namespace InsightCorp.Controllers
                     DepartmentName = model.DepartmentName,
                     JobTitle = model.JobTitle,
                     ManagerId = model.ManagerId,
-                    ManagerName = model.ManagerName,
                     City = model.City,
                     State = model.State,
                     Role = model.Role

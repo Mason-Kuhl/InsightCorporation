@@ -190,9 +190,18 @@
     <Compile Include="Migrations\202210111620282_SeededAspNetRolesTable.Designer.cs">
       <DependentUpon>202210111620282_SeededAspNetRolesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210180426498_CreatedManagersTable.cs" />
+    <Compile Include="Migrations\202210180426498_CreatedManagersTable.Designer.cs">
+      <DependentUpon>202210180426498_CreatedManagersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210180431025_alteredUsersTable.cs" />
+    <Compile Include="Migrations\202210180431025_alteredUsersTable.Designer.cs">
+      <DependentUpon>202210180431025_alteredUsersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -281,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210111620282_SeededAspNetRolesTable.resx">
       <DependentUpon>202210111620282_SeededAspNetRolesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210180426498_CreatedManagersTable.resx">
+      <DependentUpon>202210180426498_CreatedManagersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210180431025_alteredUsersTable.resx">
+      <DependentUpon>202210180431025_alteredUsersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -99,7 +99,7 @@ namespace InsightCorp.Models
 
         [Required]
         [Display(Name = "Manager ID")]
-        public string ManagerId { get; set; }
+        public int ManagerId { get; set; }
 
         [Required]
         [Display(Name = "Manager Name")]
