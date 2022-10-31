@@ -96,12 +96,10 @@ namespace InsightCorp.Models
         [Required]
         [Display(Name = "Job Title")]
         public string JobTitle { get; set; }
-
-        [Required]
+        
         [Display(Name = "Manager ID")]
         public int ManagerId { get; set; }
 
-        [Required]
         [Display(Name = "Manager Name")]
         public string ManagerName { get; set; }
 
