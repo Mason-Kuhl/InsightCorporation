@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PTOController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,11 +203,16 @@
     <Compile Include="Migrations\202211071838428_changedUserColumn.Designer.cs">
       <DependentUpon>202211071838428_changedUserColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211071945496_createdPtoTable.cs" />
+    <Compile Include="Migrations\202211071945496_createdPtoTable.Designer.cs">
+      <DependentUpon>202211071945496_createdPtoTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Pto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -265,6 +271,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\PTO\Index.cshtml" />
+    <Content Include="Views\PTO\NewRequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211071838428_changedUserColumn.resx">
       <DependentUpon>202211071838428_changedUserColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211071945496_createdPtoTable.resx">
+      <DependentUpon>202211071945496_createdPtoTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

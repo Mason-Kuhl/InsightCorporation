@@ -1,0 +1,35 @@
+﻿@model IEnumerable<InsightCorp.Models.Pto>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>PTO Requests</h2>
+@Html.ActionLink("Request Time Off", "NewRequest", "PTO")
+
+<h5>Pending</h5>
+@foreach (var request in Model)
+{
+    if (request.IsApproved == null)
+    {
+        <p>Date Requested: @request.RequestedDayOff</p>
+    }
+}
+
+<h5>Approved</h5>
+@foreach (var request in Model)
+{
+    if (request.IsApproved == true)
+    {
+        <p>Date Requested: @request.RequestedDayOff</p>
+    }
+}
+
+<h5>Denied</h5>
+@foreach (var request in Model)
+{
+    if (request.IsApproved == false)
+    {
+        <p>Date Requested: @request.RequestedDayOff</p>
+    }
+}
+

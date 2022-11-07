@@ -1,4 +1,5 @@
-﻿@model InsightCorp.Models.RegisterViewModel
+﻿@using Microsoft.AspNet.Identity;
+@model InsightCorp.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
@@ -62,6 +63,8 @@
     <div class="form-group">
         @Html.LabelFor(m => m.ManagerId, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
+            @{ var manId = User.Identity.GetUserId(); }
+            <p>Your ManagerId: @manId</p>
             @Html.TextBoxFor(m => m.ManagerId, new { @class = "form-control" })
         </div>
     </div>

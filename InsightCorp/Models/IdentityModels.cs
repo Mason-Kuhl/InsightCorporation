@@ -35,6 +35,7 @@ namespace InsightCorp.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Manager> Managers { get; set; }
+        public DbSet<Pto> PtoRequests { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

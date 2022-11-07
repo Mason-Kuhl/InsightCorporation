@@ -24,7 +24,7 @@
                     @if (User.IsInRole("Executive"))
                     {
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Company Employees", "Index", "User")</li>
+                        <li>@Html.ActionLink("My Employees", "Index", "User")</li>
                     }
                     @if (User.IsInRole("Manager"))
                     {
