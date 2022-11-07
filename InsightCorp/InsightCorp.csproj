@@ -198,6 +198,10 @@
     <Compile Include="Migrations\202210180431025_alteredUsersTable.Designer.cs">
       <DependentUpon>202210180431025_alteredUsersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211071838428_changedUserColumn.cs" />
+    <Compile Include="Migrations\202211071838428_changedUserColumn.Designer.cs">
+      <DependentUpon>202211071838428_changedUserColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -296,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210180431025_alteredUsersTable.resx">
       <DependentUpon>202210180431025_alteredUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211071838428_changedUserColumn.resx">
+      <DependentUpon>202211071838428_changedUserColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

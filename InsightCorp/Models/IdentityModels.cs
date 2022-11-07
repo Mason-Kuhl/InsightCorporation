@@ -24,7 +24,7 @@ namespace InsightCorp.Models
         public string PreferredName { get; set; }
         public DateTime DateHired { get; set; }
         public string JobTitle { get; set; }
-        public int ManagerId { get; set; }
+        public string ManagerId { get; set; }
         public string DepartmentName { get; set; }
         public string City { get; set; }
         public string State { get; set; }

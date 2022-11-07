@@ -17,6 +17,10 @@
             <th>Job Title</th>
             <th>Email</th>
             <th>Phone Number</th>
+            @if (User.IsInRole("Manager") || User.IsInRole("Executive"))
+            {
+                <th>Delete</th>
+            }
         </tr>
     </thead>
     <tbody>
@@ -40,8 +44,22 @@
             <td>@user.JobTitle</td>
             <td>@user.Email</td>
             <td>@user.PhoneNumber</td>
+            @if (User.IsInRole("Manager") || User.IsInRole("Executive"))
+            {
+                <td>@Html.ActionLink("Delete", "Delete", new { id = user.Id})</td>
+            }
         </tr>
         }
     </tbody>
 </table>
+@{
+    if (User.IsInRole("Manager"))
+    {
+        @Html.ActionLink("Register New User", "Register", "Account");
+    }
+    if (User.IsInRole("Executive"))
+    {
+        @Html.ActionLink("Register New User", "Register", "Account");
+    }
+}
 
