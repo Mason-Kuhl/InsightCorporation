@@ -20,9 +20,9 @@ namespace InsightCorp.Controllers
         public ActionResult Index()
         {
             var id = User.Identity.GetUserId();
-            var ptoList = _context.PtoRequests.Where(p => p.UserId == id).ToList();
+            var ptoList = _context.Ptoes.Where(p => p.UserId == id).ToList();
 
-            return View();
+            return View(ptoList);
         }
 
         [HttpGet]
@@ -45,10 +45,51 @@ namespace InsightCorp.Controllers
             requestedPto.RequestedDayOff = pto.RequestedDayOff;
             requestedPto.IsApproved = null;
 
-            _context.PtoRequests.Add(requestedPto);
+            _context.Ptoes.Add(requestedPto);
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult EmpRequests()
+        {
+            if (User.IsInRole("Manager"))
+            {
+                var id = User.Identity.GetUserId();
+                var ptoList = _context.Ptoes.Where(p => p.ManagerId == id).ToList();
+
+                var pendingList = new List<Pto>();
+                foreach(var request in ptoList)
+                {
+                    if (request.IsApproved == null)
+                    {
+                        pendingList.Add(request);
+                    }
+                }
+
+                return View(pendingList);
+            }
+            return HttpNotFound();
+        }
+
+        public ActionResult Approve(int id)
+        {
+            var request = _context.Ptoes.Find(id);
+            request.IsApproved = true;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("EmpRequests");
+        }
+
+        public ActionResult Deny(int id)
+        {
+            var request = _context.Ptoes.Find(id);
+            request.IsApproved = false;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("EmpRequests");
         }
     }
 }

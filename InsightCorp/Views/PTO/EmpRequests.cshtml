@@ -1,0 +1,15 @@
+﻿@model IEnumerable<InsightCorp.Models.Pto>
+@{
+    ViewBag.Title = "EmpRequests";
+}
+
+<h2>Employee PTO Requests</h2>
+
+@foreach (var request in Model)
+{
+    <p><strong>@request.UserId</strong></p>
+    <p>Requested Day Off: @request.RequestedDayOff</p>
+    @Html.ActionLink("Approve", "Approve", new { id = request.Id });
+    @Html.ActionLink("Deny", "Deny", new { id = request.Id });
+}
+

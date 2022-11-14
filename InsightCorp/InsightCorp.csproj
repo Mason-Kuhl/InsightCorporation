@@ -273,6 +273,7 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\PTO\Index.cshtml" />
     <Content Include="Views\PTO\NewRequest.cshtml" />
+    <Content Include="Views\PTO\EmpRequests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

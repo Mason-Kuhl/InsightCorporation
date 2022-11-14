@@ -8,7 +8,7 @@ namespace InsightCorp.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.PtoRequests",
+                "dbo.Ptoes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -23,7 +23,7 @@ namespace InsightCorp.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.PtoRequests");
+            DropTable("dbo.Ptoes");
         }
     }
 }
