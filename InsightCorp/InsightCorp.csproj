@@ -207,12 +207,18 @@
     <Compile Include="Migrations\202211071945496_createdPtoTable.Designer.cs">
       <DependentUpon>202211071945496_createdPtoTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212022245373_createdPayrollTable.cs" />
+    <Compile Include="Migrations\202212022245373_createdPayrollTable.Designer.cs">
+      <DependentUpon>202212022245373_createdPayrollTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Payroll.cs" />
     <Compile Include="Models\Pto.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211071945496_createdPtoTable.resx">
       <DependentUpon>202211071945496_createdPtoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212022245373_createdPayrollTable.resx">
+      <DependentUpon>202212022245373_createdPayrollTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

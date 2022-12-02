@@ -36,6 +36,7 @@ namespace InsightCorp.Models
     {
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Pto> Ptoes { get; set; }
+        public DbSet<Payroll> Payrolls { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

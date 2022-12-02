@@ -1,4 +1,4 @@
-﻿@model IEnumerable<InsightCorp.Models.ApplicationUser>
+﻿@model InsightCorp.Models.UserViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -19,12 +19,13 @@
             <th>Phone Number</th>
             @if (User.IsInRole("Manager") || User.IsInRole("Executive"))
             {
+                <th>Salary</th>
                 <th>Delete</th>
             }
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in Model)
+        @foreach (var user in Model.Users)
         {
         <tr>
             <td>@user.Id</td>
@@ -46,6 +47,13 @@
             <td>@user.PhoneNumber</td>
             @if (User.IsInRole("Manager") || User.IsInRole("Executive"))
             {
+                foreach (var payroll in Model.Payrolls)
+                {
+                    if (payroll.UserId == user.Id)
+                        {
+                            <td>@payroll.Salary</td>
+                        }
+                }
                 <td>@Html.ActionLink("Delete", "Delete", new { id = user.Id})</td>
             }
         </tr>

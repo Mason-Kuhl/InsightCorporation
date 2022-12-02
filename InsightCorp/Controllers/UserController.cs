@@ -23,15 +23,25 @@ namespace InsightCorp.Controllers
             var id = User.Identity.GetUserId();
             var users = _context.Users.ToList();
             var managerUsers = _context.Users.Where(u => u.ManagerId == id).ToList();
+            var payrolls = _context.Payrolls.ToList();
+
+            var uvm = new UserViewModel();
+            uvm.Users = managerUsers;
+            uvm.Payrolls = payrolls;
+
 
             if (User.IsInRole("Executive"))
             {
-                return View("Index", users);
+                uvm.Users = users;
+                uvm.Payrolls = payrolls;
+                return View("Index", uvm);
             }
 
             if (User.IsInRole("Manager"))
             {
-                return View("Index", managerUsers);
+                uvm.Users = managerUsers;
+                uvm.Payrolls = payrolls;
+                return View("Index", uvm);
             }
 
             return View();
